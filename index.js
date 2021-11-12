@@ -12,7 +12,7 @@ ah = ah.auctions;
 
 let cookingBfa;
 
-axios.get('https://us.api.blizzard.com/data/wow/profession/185/skill-tier/2541?namespace=static-us&locale=en_US&access_token=US200xe7C4vWpnXZWks3Jym72iY4UR3QVo')
+axios.get(BLIZZARD.KEY)
     .then(response => {
         cookingBfa = response.data
         const recipe = cookingBfa.categories.filter((e) => e.name === "Large Meals");
